@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "80daae77-1f4b-462d-bd01-66e2cd1cd9dc",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6512189",
+		"_collection_link": "https://www.postman.com/lively-desert-920978/workspace/training/collection/6512189-80daae77-1f4b-462d-bd01-66e2cd1cd9dc?action=share&source=collection_link&creator=6512189"
+	},
+	"item": [
+		{
+			"name": "Lob Endpoint",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "test_0dc8d51e0acffcb1880e0f19c79b2f5b0cc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "live_pub_a15953d6b86c7028cbf7605ed360eee:",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"address_prefix\":\"1 suggestion\",\n    \"city\":\"\",\n    \"state\":\"\",\n    \"zip_code\":\"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.lob.com/v1/us_autocompletions",
+					"protocol": "https",
+					"host": [
+						"api",
+						"lob",
+						"com"
+					],
+					"path": [
+						"v1",
+						"us_autocompletions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SuccessRequest",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "demo-password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "demo-username",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"addressPrefix\": \"1 suggestion\",\n    \"city\":\"\",\n    \"state\":\"\",\n    \"zipcode\":\"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/address",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BadRequestCase",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "demo-password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "demo-username",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"addressPrefix\": \"\",\n    \"city\":\"a\",\n    \"state\":\"b\",\n    \"zipcode\":\"c\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/address",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"address"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
