@@ -1,0 +1,17 @@
+spring:
+  security:
+    user:
+      name: demo-username
+      password: demo-password
+  application:
+    name: example
+  profiles:
+    active: dev
+server:
+  port: 8080
+lob:
+#  apikey: live_pub_a15953d6b86c7028cbf7605ed360eee
+  apikey: test_0dc8d51e0acffcb1880e0f19c79b2f5b0cc
+logging:
+  level:
+    ROOT: INFO
